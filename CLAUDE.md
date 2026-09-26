@@ -17,7 +17,9 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 **Antes de trabajar en cualquier lead magnet, lee primero:**
 1. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
 2. `marca/icp.md` — a quién le estamos hablando
-3. `lead-magnets/catalogo.md` — qué existe y en qué estado está
+3. `marca/mecanismo.md` — el motor de contenido, lo que nos diferencia
+4. `marca/oferta.md` — hacia dónde tiene que apuntar todo diagnóstico
+5. `lead-magnets/catalogo.md` — qué existe y en qué estado está
 
 ## Reglas del sistema
 
@@ -48,10 +50,47 @@ Cuando la metodología está probada, se empaqueta como skill para que
 funcione con un comando desde cualquier chat. Es la diferencia entre tener
 documentos y tener herramientas.
 
+## Fuentes de información
+
+Lo que está conectado y se puede consultar directamente:
+
+| Fuente | Acceso | Qué tiene |
+|---|---|---|
+| Notion | Completo | Oferta, promesa de marca, metodología de guiones, VSL Blueprint, Webinars Ganadores, manual interno |
+| Skill `stories-de-venta` | Completo | Metodología SRGA de stories: 3 tipos de secuencia, catálogo de imágenes por rol, mecánicas de CTA |
+| Fathom | Completo | Grabaciones y transcripciones de llamadas |
+| Drive · Gmail · Calendar | Completo | Archivos, correo, agenda |
+| SRGA Content Studio | **Sin acceso** | Plataforma interna, base de datos propia. Si tiene metodología que no está en Notion, se pierde |
+
+**Nota:** la skill `creador-ofertas` que aparece disponible es de ELEVATE
+Growth Agency CR y usa voseo costarricense. **No se usa** para material de
+SRGA — rompe la voz neutra.
+
 ## Estado actual
 
-- Base del repo: lista
-- `01-analisis-perfil`: metodología completa, pendiente de calibrar con
-  referentes reales
-- Pendiente de mí (Sebastián): subir info de referentes a `referentes/`,
-  completar `marca/icp.md` y `marca/oferta.md`
+**Listo:**
+- Base del repo y reglas del sistema
+- `marca/voz-y-tono.md`
+- `marca/icp.md` — ICP real encontrado en Notion (jul 2026)
+- `marca/oferta.md` — consultoría $5k/3 meses encontrada
+- `marca/mecanismo.md` — el motor de contenido documentado
+- `01-analisis-perfil/` — las 4 piezas armadas
+
+**Pendiente de decisión de Sebastián (bloquea el avance):**
+1. **¿A cuál oferta apunta el lead magnet?** Hay tres activas: consultoría
+   $5k, academia/mentoría, agencia ~$900/mes. El diagnóstico tiene que
+   apuntar al problema que resuelve *esa* oferta.
+2. **¿En qué idioma?** El ICP está en Miami y Tampa, pero está documentado
+   que las cuentas bilingües no funcionan. Lectura probable: dueños latinos
+   en EE.UU., todo en español. Confirmar.
+3. **¿Sigue vigente la consultoría de $5,000?** El documento es de julio 2026.
+4. **¿Se integra el Content Studio?** Exportando a este repo o por API.
+5. **¿Se aprueba cambiar el pilar «Retención» por «Referencia»?** Es la
+   propuesta más importante: alinea el diagnóstico con el mecanismo real.
+
+**Pendiente de recalibrar (depende de las decisiones de arriba):**
+- Los 6 pilares de `01-analisis-perfil/metodologia.md` están escritos para
+  creadores, no para dueños de negocio con $30-40k/mes de ganancia. Los
+  nombres propuestos: Promesa, Hook, Referencia, Coherencia, Volumen,
+  Conversión.
+- `referentes/` sigue vacío.

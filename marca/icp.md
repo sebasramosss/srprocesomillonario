@@ -1,59 +1,81 @@
 # ICP — A quién le hablo
 
-> **Estado: hipótesis.** Escrito a partir del contexto del negocio.
-> Sebastián tiene que confirmar o corregir cada punto marcado con `[?]`.
-> Hasta entonces, los lead magnets se calibran sobre esta versión.
+> **Fuente:** Notion, «SRGA — Definición de oferta de consultoría»,
+> 20 de julio 2026.
+> **Estado: encontrado, pendiente de confirmar.**
+> Este archivo reemplaza la hipótesis anterior, que estaba equivocada.
 
-## Perfil principal
+## Perfil
 
-**Quién es:** dueño de negocio o marca personal que ya vende, pero cuyo
-contenido no le trae clientes de forma predecible. `[?]`
+**Quién:** dueños de negocios de servicios. Dueños, no empleados —
+el dueño del salón, no la estilista.
 
-**Dónde está:** Instagram principalmente, quizá TikTok. Entre 1,000 y
-50,000 seguidores. `[?]`
+**Segmentos definidos:**
+- Salones de belleza
+- Servicios financieros (crédito, impuestos)
+- Real estate
 
-**Qué ya intentó:**
-- Publicar más seguido (y se quemó)
-- Copiar formatos que vio funcionar a otros (y no le funcionaron igual)
-- Contratar a alguien que "le maneje las redes" (y solo le programó posts)
-- Cursos y plantillas que nunca aplicó completas
+**Dónde:** Estados Unidos. Miami y Tampa.
 
-## Lo que le duele (en sus palabras)
+**Tamaño:** $30,000 a $40,000 al mes de **ganancia** (no facturación).
 
-- "Publico y publico y no pasa nada"
-- "Me ven pero no me compran"
-- "No sé qué contenido hacer"
-- "A otros con menos seguidores les va mejor que a mí"
-- "Me da pena venderme"
-- "No tengo tiempo para estar pensando en contenido todos los días"
+**Motivación:**
+- Establecer autoridad en su sector
+- No quedarse atrás en redes sociales
+- Generar clientes nuevos
 
-## Lo que cree que necesita (y está equivocado)
+**Punto de partida:** ya están creando contenido, pero sin estrategia
+efectiva.
 
-Cree que necesita: más seguidores, más views, mejor cámara, publicar más.
+---
 
-En realidad necesita: claridad de posicionamiento, un sistema de contenido
-repetible, y un camino claro de seguidor a cliente.
+## Lo que esto cambia en el lead magnet
 
-**Esta brecha es el corazón de todos los lead magnets.** El análisis le
-muestra que su problema no era el que creía. Ese momento es lo que hace
-que quiera la llamada.
+Un dueño de salón en Miami que gana $35,000 al mes **no contrata por
+seguidores. Contrata por clientes.**
 
-## Lo que NO es mi cliente
+El análisis no puede hablar de alcance, views ni crecimiento de cuenta.
+Tiene que hablar de:
 
-- Quien quiere "hacerse viral" sin tener nada que vender
-- Quien busca crecer seguidores como único objetivo
-- Quien no tiene oferta ni idea de a quién le vende
-- Quien quiere resultados sin aparecer en cámara `[?]`
+- Citas o clientes nuevos que entran por Instagram
+- Ticket promedio y valor de un cliente
+- Autoridad en su zona geográfica y su sector
+- Tiempo del dueño (que es caro y escaso)
+
+**El dolor no es «publico y no pasa nada».** Es más cerca de:
+- «Invierto en contenido y no sé si me está trayendo clientes»
+- «Mi competencia aparece más que yo»
+- «No tengo tiempo para esto»
+
+---
+
+## Tensión sin resolver: el idioma
+
+El ICP está en Estados Unidos. Pero en el material también está
+documentado que:
+
+- Las cuentas bilingües no funcionan — el algoritmo penaliza cuando parte
+  de la audiencia no entiende el idioma. Hay que elegir un solo idioma.
+- Sebastián rechazó una clienta de $8,000 que quería contenido en inglés.
+
+**Lectura probable:** el ICP son dueños **latinos** en Estados Unidos, y
+todo va en español. Eso resuelve la tensión.
+
+**Pendiente de Sebastián:** confirmarlo. Si el lead magnet tiene que ser
+en inglés, cambia completo.
+
+---
 
 ## Nivel de conciencia al llegar
 
-La mayoría llega desde un reel, comentando una palabra clave. Eso significa:
+Llega desde un reel, comentando una palabra clave:
 
-- **No me conoce.** No hay confianza previa.
+- **No conoce la marca.** Sin confianza previa.
 - **Está en modo scroll.** Atención baja.
-- **Su motivación es curiosidad, no urgencia.** Quiere ver qué le dicen
-  de su perfil.
+- **Su motivación es curiosidad**, no urgencia.
 
-Por eso el análisis tiene que ser tan bueno que cambie el marco: de
-"qué me van a decir" a "esta persona entiende mi negocio mejor que yo".
-Ese cambio es el que genera la llamada.
+Pero a diferencia de un creador, este perfil **sí tiene presupuesto y sí
+toma decisiones rápido**. Es dueño de negocio: si ve que el diagnóstico
+es serio y le muestra dinero que está dejando sobre la mesa, agenda.
+
+Por eso el análisis tiene que sonar a consultoría, no a tips de redes.
