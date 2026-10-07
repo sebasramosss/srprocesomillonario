@@ -171,7 +171,7 @@
     </div>
     <p class="idx">ANÁLISIS DE PERFIL · GRATIS</p>
     <h1>¿Por qué tu<br>contenido no<br>te trae <span class="o">clientes</span>?</h1>
-    <p style="margin-top:22px">Pon tus números y te digo exactamente dónde se corta tu camino. Lo comparo contra <strong>75 videos reales</strong> de nuestros clientes, medidos uno por uno.</p>
+    <p style="margin-top:22px">Pon tus números y te digo exactamente dónde se corta tu camino. Lo comparo contra <strong>119 videos reales</strong> de nuestros clientes, medidos uno por uno.</p>
   </header>
 
   <div class="form">
@@ -219,6 +219,19 @@
         <div class="f">
           <label for="likes">Likes promedio por video</label>
           <input type="number" id="likes" min="1" step="1" inputmode="numeric" placeholder="400">
+        </div>
+      </div>
+      <div class="grid one" style="margin-top:15px">
+        <div class="f">
+          <label for="cta">¿Qué prometes al final de tus videos?</label>
+          <select id="cta">
+            <option value="">Elige una</option>
+            <option value="regalo">Les mando algo gratis (video, guía, clase)</option>
+            <option value="contacto">Que me pongo en contacto con ellos</option>
+            <option value="seguir">Que me sigan</option>
+            <option value="nada">No pido nada al final</option>
+          </select>
+          <p class="hint">Medimos 119 videos. Esta respuesta sola explica más que el gancho.</p>
         </div>
       </div>
       <div class="grid one" style="margin-top:15px">
@@ -275,8 +288,8 @@
 
       <div class="bar">
         <div class="bar-t"><span>Tu tasa de conversación</span><span id="r-bar-val"></span></div>
-        <div class="bar-track"><div class="bar-fill" id="r-bar"></div><div class="bar-med" id="r-med" title="Mediana de nuestros 75 videos"></div></div>
-        <div class="bar-lab"><span>0%</span><span>La línea negra es la mediana de nuestros 75 videos: 3.11%</span></div>
+        <div class="bar-track"><div class="bar-fill" id="r-bar"></div><div class="bar-med" id="r-med" title="Mediana de nuestros 119 videos"></div></div>
+        <div class="bar-lab"><span>0%</span><span>La línea negra es la mediana de nuestros 119 videos: 4.61%</span></div>
       </div>
     </section>
 
@@ -310,7 +323,7 @@
     <section class="data">
       <span class="fig num">27,183</span>
       <p class="cap">comentarios en un solo video</p>
-      <p class="sub">El récord de nuestros 75 videos medidos. Y fue un tutorial.</p>
+      <p class="sub">El récord de nuestros 119 videos medidos. Y fue un tutorial.</p>
     </section>
 
     <section style="padding-top:0">
@@ -323,7 +336,7 @@
     <section>
       <p class="idx">05 &nbsp;<span class="g">CUATRO GANCHOS</span></p>
       <h2>Los que más<br>conversación<br>generaron</h2>
-      <p>Medidos en 75 videos de nuestros clientes. Cambia la <span class="o">X</span> por lo tuyo.</p>
+      <p>Medidos en 119 videos de nuestros clientes. Cambia la <span class="o">X</span> por lo tuyo.</p>
       <ul class="hooks" id="r-hooks"></ul>
     </section>
   </div>
@@ -362,8 +375,10 @@
   function esc(s){return String(s).replace(/[&<>"']/g,function(c){
     return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
 
-  /* Benchmarks medidos en los 75 videos de clientes SRGA (nichos/data) */
-  var MEDIANA = 3.11;   // mediana de comentarios/likes
+  /* Benchmarks medidos en 119 videos de clientes SRGA y de Victor Heras (nichos/data) */
+  var MEDIANA = 4.61;        // mediana de comentarios/likes en 119 videos
+  var MED_REGALO = 19.33;    // mediana cuando el CTA promete un regalo
+  var MED_CONTACTO = 2.89;   // mediana cuando promete una llamada
   var ESTANDAR_VIDEOS = 14;
   var META = 10000;
 
@@ -378,6 +393,7 @@
       vistas: parseFloat($('vistas').value),
       likes: parseFloat($('likes').value),
       comentarios: parseFloat($('comentarios').value),
+      cta: $('cta').value,
       bio: ($('bio').value||'').trim()
     };
     var faltan=[];
@@ -389,6 +405,7 @@
     if(!(v.vistas>=0)) faltan.push('vistas promedio');
     if(!(v.likes>0)) faltan.push('likes promedio');
     if(!(v.comentarios>=0)) faltan.push('comentarios promedio');
+    if(!v.cta) faltan.push('qué prometes al final');
     if(faltan.length){
       var e=$('error'); e.hidden=false;
       e.textContent='Falta '+faltan.slice(0,3).join(', ')+(faltan.length>3?' y '+(faltan.length-3)+' más':'')+'.';
@@ -425,11 +442,20 @@
       figN=mult.toFixed(1)+'×'; figCap='vistas contra tus seguidores';
       figSub='Por debajo de 1× significa que ni tus propios seguidores te están viendo.';
       diag='Tus videos promedian '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores. Eso es <strong>'+mult.toFixed(1)+' veces</strong> tu audiencia — en rojo. Cuando ni tu propia gente llega al video, el problema está en el gancho.';
+    } else if (tasa < MEDIANA && v.cta !== 'regalo'){
+      roto='cta';
+      var promesa = v.cta==='contacto' ? 'que te pones en contacto con ellos'
+                  : v.cta==='seguir'   ? 'que te sigan'
+                  : 'nada';
+      titulo='Tu problema es<br>la <span class="o">última frase</span><br>de tus videos.';
+      figN='6.7×'; figCap='más conversación con un regalo';
+      figSub='Medido en 119 videos. Prometer algo gratis contra prometer una llamada.';
+      diag='Tus videos llegan: '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores es '+mult.toFixed(1)+'× tu audiencia. El alcance no es tu problema.<br><br>Al final de tus videos prometes <strong>'+promesa+'</strong>. En nuestros 119 videos medidos, los que prometen una llamada tienen una mediana de <strong>2.89%</strong> de conversación. Los que prometen un regalo — un video, una guía, una clase — tienen <strong>19.33%</strong>.<br><br><strong>Nadie comenta para que lo llamen.</strong>';
     } else if (tasa < MEDIANA){
       roto='puente';
       titulo='Tu contenido<br>funciona. Tu<br><span class="o">puente</span> no existe.';
       figN=tasa.toFixed(2)+'%'; figCap='tu tasa de conversación';
-      figSub='La mediana de nuestros 75 videos medidos es 3.11%.';
+      figSub='La mediana de nuestros 119 videos medidos es 4.61%.';
       diag='Tus videos llegan: '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores es '+mult.toFixed(1)+'× tu audiencia. Pero de cada 100 personas que te dan like, solo <strong>'+tasa.toFixed(1)+' comentan</strong>. Tus videos terminan y nadie sabe qué hacer después.';
     } else if (faltantes > 0 && v.clientes < 1){
       roto='oferta';
@@ -441,13 +467,13 @@
       roto='escala';
       titulo='Tu base<br>está <span class="o">lista</span>.';
       figN=tasa.toFixed(2)+'%'; figCap='tu tasa de conversación';
-      figSub='Por encima de la mediana de nuestros 75 videos.';
-      diag='Tus videos convierten a '+tasa.toFixed(1)+'%, por encima de la mediana de 3.11%. Tu gancho funciona, tu puente existe y estás cerrando. Lo que te separa del siguiente nivel es volumen y sistema, no estrategia.';
+      figSub='Por encima de la mediana de nuestros 119 videos.';
+      diag='Tus videos convierten a '+tasa.toFixed(1)+'%, por encima de la mediana de 4.61%. Tu gancho funciona, tu puente existe y estás cerrando. Lo que te separa del siguiente nivel es volumen y sistema, no estrategia.';
     }
 
     $('r-meta').innerHTML = 'ANÁLISIS DE PERFIL' + (v.usuario? ' · @'+esc(v.usuario) : '');
     $('r-titulo').innerHTML = titulo;
-    $('r-intro').innerHTML = 'Comparado contra <strong>75 videos reales</strong> de clientes nuestros, medidos uno por uno.';
+    $('r-intro').innerHTML = 'Comparado contra <strong>119 videos reales</strong> de clientes nuestros, medidos uno por uno.';
     $('r-fig').textContent = figN;
     $('r-figcap').textContent = figCap;
     $('r-figsub').textContent = figSub;
@@ -461,7 +487,7 @@
     $('r-metrics').innerHTML =
       '<div class="metric '+volClass+'"><span class="v num">'+N(v.videos)+'<span style="color:var(--t3);font-size:.5em">/'+ESTANDAR_VIDEOS+'</span></span><span class="l">Videos al mes</span><span class="n">'+(v.videos>=ESTANDAR_VIDEOS?'Estás en el estándar':'Nuestro estándar por cliente')+'</span></div>'+
       '<div class="metric '+colClass+'"><span class="v num">'+mult.toFixed(1)+'×</span><span class="l">Vistas vs. seguidores</span><span class="n">'+(color==='verde'?'Verde · viral':color==='amarillo'?'Amarillo · funcional':'Rojo · por debajo')+'</span></div>'+
-      '<div class="metric '+tasaClass+'"><span class="v num">'+tasa.toFixed(2)+'%</span><span class="l">Conversación</span><span class="n">Mediana nuestra: 3.11%</span></div>'+
+      '<div class="metric '+tasaClass+'"><span class="v num">'+tasa.toFixed(2)+'%</span><span class="l">Conversación</span><span class="n">Mediana nuestra: 4.61%</span></div>'+
       '<div class="metric"><span class="v num">'+N(comentariosMes)+'</span><span class="l">Comentarios al mes</span><span class="n">Cada uno es un DM posible</span></div>';
 
     /* ---------- barra ---------- */

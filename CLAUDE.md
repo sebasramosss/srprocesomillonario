@@ -21,10 +21,11 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 2. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
 3. `marca/sebas.md` — cómo pienso y cómo enseño, para que todo suene a mí
 4. `nichos/README.md` — el criterio de sector / nicho / micro nicho
-5. `nichos/ganchos.md` — los 7 ganchos que funcionan en todos los nichos
-6. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
-7. `marca/icp.md` — a quién le estamos hablando
-8. `lead-magnets/catalogo.md` — qué existe y en qué estado está
+5. `nichos/cta.md` — el hallazgo más grande: el regalo contra la llamada
+6. `nichos/ganchos.md` — los ganchos medidos en 119 videos
+7. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
+8. `marca/icp.md` — a quién le estamos hablando
+9. `lead-magnets/catalogo.md` — qué existe y en qué estado está
 
 ## Reglas del sistema
 
@@ -97,7 +98,7 @@ Lo que está conectado y se puede consultar directamente:
 | Skill `stories-de-venta` | Completo | Metodología SRGA de stories: 3 tipos de secuencia, catálogo de imágenes por rol, mecánicas de CTA |
 | Fathom | Completo | Grabaciones y transcripciones de llamadas |
 | Drive · Gmail · Calendar | Completo | Archivos, correo, agenda |
-| SRGA Content Studio | **Export manual** | Sebastián exporta CSV de videos ganadores. Los que hay están en `nichos/data/` (75 videos, 5 cuentas, con transcripción y métricas) |
+| SRGA Content Studio | **Export manual** | Sebastián exporta CSV de videos ganadores. Los que hay están en `nichos/data/` (119 videos, 9 cuentas, con transcripción y métricas) |
 
 **Nota:** la skill `creador-ofertas` que aparece disponible es de ELEVATE
 Growth Agency CR y usa voseo costarricense. **No se usa** para material de
