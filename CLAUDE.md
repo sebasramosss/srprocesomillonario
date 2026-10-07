@@ -21,7 +21,7 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 2. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
 3. `marca/sebas.md` — cómo pienso y cómo enseño, para que todo suene a mí
 4. `nichos/README.md` — el criterio de sector / nicho / micro nicho
-5. `nichos/cta.md` — el hallazgo más grande: el regalo contra la llamada
+5. `nichos/cta.md` — el CTA se elige por lo que vende el cliente, no por la tasa
 6. `nichos/ganchos.md` — los ganchos medidos en 119 videos
 7. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
 8. `marca/icp.md` — a quién le estamos hablando
@@ -30,6 +30,11 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 ## Reglas del sistema
 
 **REGLA MADRE — Nada se inventa.**
+
+*Corolario, aprendido el 7 oct 2026:* un dato correcto no es una
+recomendación correcta. Antes de aconsejar algo, entender el negocio del
+cliente: qué vende, a cuánto y a quién. Ver el caso de Ibsen en
+`nichos/cta.md`.
 
 Todo lo que se le muestra a un prospecto sale de material real de SRGA:
 guiones grabados, métricas medidas, frases dichas en una llamada, casos

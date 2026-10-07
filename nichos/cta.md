@@ -1,21 +1,21 @@
-# El CTA — el hallazgo más grande del sistema
+# El CTA — regalo o contacto
 
-> **Fuente:** 119 reels de 9 cuentas de clientes SRGA y de Victor Heras,
-> con transcripción y métricas. CSV crudos en `nichos/data/`.
-> Medido el 7 oct 2026.
+> **Fuente:** 119 reels de 9 cuentas, con transcripción y métricas
+> (`nichos/data/`). Medido el 7 oct 2026.
+> **Interpretación corregida por Sebastián el mismo día** — ver la sección
+> «El error que cometí» al final.
 
-## La pregunta
+## La regla, en una frase
 
-Todos piden el comentario. Entonces, ¿por qué unos generan 30% de
-conversación y otros 2%?
+> ## El CTA no se elige por la tasa de comentarios. Se elige por lo que vende el cliente.
 
-**La respuesta no es el gancho. Es lo que prometes a cambio.**
+Hay una diferencia medida de **6.7×** entre prometer un regalo y prometer
+una llamada. Pero esa diferencia **no significa que todos deban regalar
+algo.** Significa que hay que saber cuándo cada uno aplica.
 
 ---
 
-# EL DATO
-
-Clasificamos los 119 videos según lo que promete el CTA:
+# EL DATO CRUDO
 
 | Lo que promete el CTA | Videos | Conversación (mediana) |
 |---|---|---|
@@ -24,61 +24,107 @@ Clasificamos los 119 videos según lo que promete el CTA:
 | **Un contacto** — «me pongo en contacto contigo» | 39 | **2.89%** |
 | No pide nada | 27 | 2.30% |
 
-> ## Prometer un regalo genera 6.7 veces más conversación que prometer una llamada.
+Y se repite dentro de cada cuenta — mismo creador, mismo nicho, misma
+audiencia:
 
----
-
-# POR QUÉ ESTO NO ES CASUALIDAD
-
-El dato se repite **dentro de cada cuenta**. Mismo creador, mismo nicho,
-misma audiencia, mismo mes. Lo único que cambia es qué promete el CTA:
-
-| Cuenta | Con REGALO | Con CONTACTO | Diferencia |
-|---|---|---|---|
-| `dainygranes.realtor` | **13.59%** | 1.19% | **11.4×** |
-| `godoyrevv` | **27.18%** | 6.31% | **4.3×** |
-| `yanetsjewelrytampa` | **19.59%** | 6.01% | **3.3×** |
-| `ibseng` | **6.11%** | 2.50% | **2.4×** |
-| `lordconstruye` | **31.52%** | 17.96% | **1.8×** |
-
-**Cinco de cinco.** No hay una sola cuenta donde prometer una llamada
-gane.
-
----
-
-# EL CASO QUE LO PRUEBA TODO
-
-Dos cuentas. **El mismo nicho, la misma oferta**: construir casas en
-Estados Unidos con dinero del banco.
-
-| | `lordconstruye` | `ibseng` |
+| Cuenta | Con REGALO | Con CONTACTO |
 |---|---|---|
-| **Mediana de conversación** | **26.26%** | **2.58%** |
-| Videos | 16 | 25 |
-| CTA de regalo | 11 de 16 | 2 de 25 |
-| CTA de contacto | 1 de 16 | **21 de 25** |
+| `dainygranes.realtor` | 13.59% | 1.19% |
+| `godoyrevv` | 27.18% | 6.31% |
+| `yanetsjewelrytampa` | 19.59% | 6.01% |
+| `ibseng` | 6.11% | 2.50% |
+| `lordconstruye` | 31.52% | 17.96% |
 
-Diez veces de diferencia. Y la única variable es la última frase del
-video.
+El dato es sólido. La pregunta es qué hacer con él.
 
-**Lo que dice `ibseng`:**
-> «Comenta la palabra **proyecto** y me pongo en contacto contigo.»
+---
 
-**Lo que dice `lordconstruye`:**
-> «Escribe la palabra **clase**. Te voy a mandar una clase privada en la
-> que te explico de la A hasta la Z cómo entrar en el negocio de la
-> construcción de casas, sin saber de construcción y usando el dinero
-> del banco.»
+# LA REGLA REAL: DEPENDE DEL PRODUCTO
 
-Uno promete una llamada de ventas. El otro promete algo que vale.
+## Producto digital → REGALO
 
-**Nadie comenta para que lo llamen.**
+*Clase, curso, academia, membresía, formación.*
+
+**Por qué funciona:** el regalo **es una muestra del producto**. Si vendes
+una clase grabada, regalar una clase grabada más corta es coherente. No
+hay fricción entre el regalo y lo que se vende.
+
+**Clientes:** `lordconstruye` (vende formación de construcción),
+`darsysmilian` (academia de maquillaje), `godoyrevv` (guía de reventa).
+
+**Confirmado por Sebastián:** con Godoy aplicaron el CTA de video y se
+disparó. Cuando le pusieron contacto, bajó.
+
+## Producto físico o mayoreo → REGALO para el alcance, el cierre es aparte
+
+*Oro al mayoreo, perfumes, inventario.*
+
+**Por qué es mixto:** no se vende con un PDF. Hay que armar órdenes,
+escoger piezas, financiar. Pero el regalo sirve igual para **abrir la
+conversación**.
+
+**Cómo lo resuelven:** «comenta MAYOREO y te mando un video de cómo hacer
+tus primeras ventas». El video abre el DM; la orden se arma después.
+
+**Clientes:** `yanetsjewelrytampa`. Confirmado: cuando usan la palabra
+VIDEO el rate sube mucho.
+
+## Servicio de alto ticket → CONTACTO, y está bien
+
+*Proyectos de construcción de +$100,000. Consultoría. Obra.*
+
+**Por qué el contacto es correcto:** acá el objetivo **no es volumen de
+comentarios**. Es que comente gente que de verdad tenga un terreno y
+pueda invertir seis cifras.
+
+Un regalo atrae curiosos. Cien comentarios de gente con terreno valen más
+que tres mil de gente que quiere un PDF gratis.
+
+**Cliente:** `ibseng`. Su 2.58% **no es un error**: es el precio de
+filtrar. Su CTA está calibrado a su ticket.
+
+---
+
+# LA TABLA DE DECISIÓN
+
+| Qué vende | Ticket | CTA | Objetivo del CTA |
+|---|---|---|---|
+| Producto digital | cualquiera | **Regalo** | Volumen de leads calificables |
+| Producto físico / mayoreo | medio | **Regalo** para abrir el DM | Conversación, el cierre va aparte |
+| Servicio de alto ticket | seis cifras | **Contacto** | Filtrar, no acumular |
+
+**La pregunta que decide:** *¿el regalo puede ser una muestra de lo que
+vendo?*
+
+- Sí → regalo.
+- No, y mi ticket es alto → contacto.
+- No, pero mi ticket es accesible → regalo que abra el DM, y el cierre
+  aparte.
+
+---
+
+# EL ERROR QUE COMETÍ
+
+Al ver el dato, mi conclusión fue: «Ibsen está dejando dinero sobre la
+mesa, hay que cambiarle el CTA a un regalo».
+
+**Eso estaba mal.** Ibsen vende proyectos de más de cien mil dólares. No
+tiene producto digital que regalar, y subirle el volumen de comentarios le
+llenaría el DM de gente sin terreno. Su CTA de contacto es la decisión
+correcta para su negocio.
+
+**Lo que aprendí:** la tasa de conversación es una métrica de diagnóstico,
+no un objetivo en sí. Optimizarla a ciegas puede romper la calificación de
+un negocio de alto ticket.
+
+**Y la regla general que queda:** antes de recomendar un CTA, entender qué
+vende el cliente y a cuánto. Nunca al revés.
 
 ---
 
 # LOS DETALLES DE EJECUCIÓN DE LORDCONSTRUYE
 
-Más allá del regalo, hace cuatro cosas que nadie más hace:
+Cuando el regalo sí aplica, así se ejecuta bien:
 
 **1. La primera línea del caption es el CTA, no el tema.**
 > `Escribe la palabra "CLASE" en comentarios👇`
@@ -90,48 +136,19 @@ Más allá del regalo, hace cuatro cosas que nadie más hace:
 > «Ok, ok, comenta. **Casa.**»
 
 **4. Cambia la palabra según el video.**
-CLASE · CASA · GUIA · TERRENO · CONSTRUIR · ESTUDIANTE.
-Cada una promete algo distinto, y eso le permite repetir el mismo tema
-sin que se sienta repetido.
+CLASE · CASA · GUIA · TERRENO · CONSTRUIR · ESTUDIANTE. Cada una promete
+algo distinto, y eso le permite repetir el mismo tema sin que se sienta
+repetido.
 
 ---
 
-# LAS PALABRAS QUE SE USAN HOY
+# PARA EL LEAD MAGNET DE LA ACADEMIA
 
-| Palabra | Cuenta | Qué promete |
-|---|---|---|
-| CLASE | lordconstruye | Una clase privada grabada |
-| GUIA | lordconstruye, godoyrevv | Una guía escrita |
-| TERRENO | lordconstruye | Guía para escoger terreno |
-| MAYOREO | yanet, godoyrevv | Un video de cómo hacer las primeras ventas |
-| CASA | dainy, fleitas, lordconstruye | Mixto |
-| MAQUILLAJE / CLASE | darsysmilian | Un video gratis |
-| CATÁLOGO / PRECIO | eliventura | Los precios |
-| PROYECTO | ibseng | Una llamada ← **el que menos convierte** |
+La Academia es **producto digital** de $1,200 a $5,000. El regalo aplica
+de lleno — y de hecho ya es lo que se hace: «comenta VIRAL y te mando el
+análisis».
 
----
-
-# LO QUE ESTO CAMBIA
-
-## En el diagnóstico
-
-La primera pregunta del analizador ya no es sobre el gancho. Es:
-
-> **¿Qué prometes al final de tus videos?**
-
-Si la respuesta es «que me pongo en contacto» o «que me sigan», ahí está
-el problema, y se arregla en un día. No hace falta cambiar el contenido,
-el formato ni la estrategia. Solo la última frase.
-
-## En producción
-
-Todo cliente necesita **un regalo por palabra clave**: un video corto, una
-guía en PDF, una clase grabada. Sin eso, el CTA no tiene con qué pagar el
-comentario.
-
-## Lo que ya sabíamos y ahora está medido
-
-La regla SRGA decía: *atraer desde el sector, tender el puente al nicho
-dentro de la historia, y capturar con un **CTA de regalo**.*
-
-Estaba bien. Ahora tiene número: **6.7×**.
+Pero el analizador **no puede dar el consejo a ciegas**. Si llega alguien
+que vende proyectos de seis cifras, decirle «cambia tu CTA a un regalo»
+sería un mal consejo. El diagnóstico tiene que mirar primero qué vende y
+a cuánto.

@@ -187,6 +187,18 @@
           <input type="text" id="producto" placeholder="Ej: programa para maquilladoras" maxlength="70" autocomplete="off">
         </div>
       </div>
+      <div class="grid one" style="margin-top:15px">
+        <div class="f">
+          <label for="tipo">¿Qué tipo de producto es?</label>
+          <select id="tipo">
+            <option value="">Elige uno</option>
+            <option value="digital">Digital — curso, clase, academia, membresía</option>
+            <option value="fisico">Físico — inventario, mayoreo, retail</option>
+            <option value="servicio">Servicio — consultoría, proyectos, trabajo a medida</option>
+          </select>
+          <p class="hint">Cambia por completo qué llamado a la acción te conviene.</p>
+        </div>
+      </div>
       <div class="grid" style="margin-top:15px">
         <div class="f">
           <label for="precio">¿A cuánto lo vendes?</label>
@@ -387,6 +399,7 @@
       usuario: ($('usuario').value||'').trim().replace(/^@/,''),
       producto: ($('producto').value||'').trim(),
       precio: parseFloat($('precio').value),
+      tipo: $('tipo').value,
       clientes: parseFloat($('clientes').value),
       seguidores: parseFloat($('seguidores').value),
       videos: parseFloat($('videos').value),
@@ -398,6 +411,7 @@
     };
     var faltan=[];
     if(!v.producto) faltan.push('qué vendes');
+    if(!v.tipo) faltan.push('el tipo de producto');
     if(!(v.precio>0)) faltan.push('el precio');
     if(!(v.clientes>=0)) faltan.push('clientes al mes');
     if(!(v.seguidores>0)) faltan.push('seguidores');
@@ -427,6 +441,7 @@
     var necesarios = Math.ceil(META / v.precio);
     var faltantes  = Math.max(0, necesarios - v.clientes);
     var comentariosMes = Math.round(v.comentarios * v.videos);
+    var altoTicket = (v.tipo==='servicio' && v.precio >= 10000);
 
     /* ---------- el eslabón roto ---------- */
     var roto, titulo, diag, figN, figCap, figSub;
@@ -442,6 +457,12 @@
       figN=mult.toFixed(1)+'×'; figCap='vistas contra tus seguidores';
       figSub='Por debajo de 1× significa que ni tus propios seguidores te están viendo.';
       diag='Tus videos promedian '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores. Eso es <strong>'+mult.toFixed(1)+' veces</strong> tu audiencia — en rojo. Cuando ni tu propia gente llega al video, el problema está en el gancho.';
+    } else if (tasa < MEDIANA && altoTicket && v.cta === 'contacto'){
+      roto='califica';
+      titulo='Tu tasa baja<br>no es un error.<br>Es un <span class="o">filtro</span>.';
+      figN=tasa.toFixed(2)+'%'; figCap='tu tasa de conversación';
+      figSub='Y para lo que vendes, eso está bien.';
+      diag='Vendes un servicio de '+M(v.precio)+'. A ese ticket, <strong>el volumen de comentarios no es el objetivo</strong>: lo es que comente gente que de verdad pueda invertir.<br><br>Medimos 119 videos. Los CTA de regalo generan 19.33% de conversación contra 2.89% de los de contacto. Pero un regalo te llena el DM de curiosos, y tú no necesitas volumen: necesitas calificados.<br><br><strong>Tu CTA está bien calibrado.</strong> Tu problema está en otra parte: en si los que comentan llegan listos para hablar de números.';
     } else if (tasa < MEDIANA && v.cta !== 'regalo'){
       roto='cta';
       var promesa = v.cta==='contacto' ? 'que te pones en contacto con ellos'
@@ -450,7 +471,12 @@
       titulo='Tu problema es<br>la <span class="o">última frase</span><br>de tus videos.';
       figN='6.7×'; figCap='más conversación con un regalo';
       figSub='Medido en 119 videos. Prometer algo gratis contra prometer una llamada.';
-      diag='Tus videos llegan: '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores es '+mult.toFixed(1)+'× tu audiencia. El alcance no es tu problema.<br><br>Al final de tus videos prometes <strong>'+promesa+'</strong>. En nuestros 119 videos medidos, los que prometen una llamada tienen una mediana de <strong>2.89%</strong> de conversación. Los que prometen un regalo — un video, una guía, una clase — tienen <strong>19.33%</strong>.<br><br><strong>Nadie comenta para que lo llamen.</strong>';
+      var puede = v.tipo==='digital'
+        ? 'Vendes producto digital, entonces el regalo es lo más fácil que hay: regalas una versión corta de lo mismo que vendes.'
+        : v.tipo==='fisico'
+          ? 'Vendes producto físico, entonces el regalo no cierra la venta — pero sí abre el DM. Un video de cómo hacer las primeras ventas funciona: la orden se arma después.'
+          : 'Vendes un servicio de '+M(v.precio)+'. A ese precio el regalo te conviene, porque todavía necesitas volumen para encontrar a los buenos.';
+      diag='Tus videos llegan: '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores es '+mult.toFixed(1)+'× tu audiencia. El alcance no es tu problema.<br><br>Al final de tus videos prometes <strong>'+promesa+'</strong>. En nuestros 119 videos medidos, los que prometen una llamada tienen una mediana de <strong>2.89%</strong> de conversación. Los que prometen un regalo — un video, una guía, una clase — tienen <strong>19.33%</strong>.<br><br><strong>Nadie comenta para que lo llamen.</strong><br><br>'+puede;
     } else if (tasa < MEDIANA){
       roto='puente';
       titulo='Tu contenido<br>funciona. Tu<br><span class="o">puente</span> no existe.';
