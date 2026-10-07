@@ -2,7 +2,11 @@
 
 > **Fuente:** clasificación de clientes SRGA (clase Victor Heras, 7 oct
 > 2026), carpetas de guiones por cliente y resúmenes de Fathom.
-> Cada fila sale de una cuenta real que manejamos o manejamos.
+> Cada fila sale de una cuenta real que manejamos.
+>
+> **Los números son reales** (confirmado por Sebastián, 7 oct 2026). Se
+> escriben con «+» porque solo suben o se estancan: así el dato nunca
+> queda desactualizado.
 
 **Esta es la data que nadie puede copiar.** Un competidor replica la
 interfaz del analizador en una tarde. No puede replicar haber manejado
@@ -35,9 +39,9 @@ Alguien llega con una pieza y pregunta cuánto vale. Se explica, se pesa,
 se le pone precio. El loop se abre en el primer segundo.
 
 **Formatos validados:**
-- «¿Cuánto vale esto?» / juego de adivinar precios — **Eli: 430K**
-- Conflicto familiar + dinero — **Yanet: 2.37M y 12,324 comentarios**
-- El espectáculo del dinero («tengo una emergencia») — **París: 3.2M**
+- «¿Cuánto vale esto?» / juego de adivinar precios — **Eli: +430 mil**
+- Conflicto familiar + dinero — **Yanet: +2.37 millones y +12,324 comentarios**
+- El espectáculo del dinero («tengo una emergencia») — **París: +3.2 millones**
 - Narrador de autoridad (la historia de la joyería)
 - Rutina del dueño (7am / 10am, el día completo)
 - Mayoreo: la orden grande, el cliente mayorista
@@ -61,12 +65,12 @@ La diferencia fue el puente («tú también puedes hacerlo») y el regalo.
 **Sector:** dinero, comprar casa, el inmigrante que por fin tiene su casa.
 
 **Formatos validados:**
-- El salto de dinero: «un dólar… cien mil dólares» — **6M de vistas**
+- El salto de dinero: «un dólar… cien mil dólares» — **+6 millones de vistas**
 - Costos reales de construir — **0.31% de conversión** (lo que más convierte)
 - Comprar vs. construir
 
 **Lo que NO funciona:** el contenido técnico. El video de la zapata hizo
-**90K** contra millones de los de dinero. A nadie le importa si la pared
+**90 mil** contra millones de los de dinero. A nadie le importa si la pared
 lleva madera o concreto.
 
 **La lección:** lo técnico muere en alcance pero convierte mejor por
@@ -81,9 +85,9 @@ cierra.
 **Sector:** finanzas familiares, ahorro, situaciones reales de pareja.
 
 **Formatos validados:**
-- Pareja A vs. pareja B (rica vs. pobre) — **Dainy: 731K**
+- Pareja A vs. pareja B (rica vs. pobre) — **Dainy: +731 mil**
 - «Si somos ricos, ¿por qué rentamos casa?» — cuenta de 3,000 seguidores
-  con **180K vistas** (referencia de Victor)
+  con **+180 mil vistas** (referencia de Victor)
 
 **Nota de estrategia (Noel, oct 2026):** storytelling auténtico para
 diferenciarse en un mercado saturado. **Evitar los «personajes» falsos.**
@@ -96,7 +100,7 @@ diferenciarse en un mercado saturado. **Evitar los «personajes» falsos.**
 **Sector:** belleza, mujer que gana dinero, lujo, «qué corte te queda».
 
 **Formatos validados:**
-- Escalera de precio — **Darsys: 606K**
+- Escalera de precio — **Darsys: +606 mil**
 - Tutorial de nicho — menos vistas pero **1% de conversión**, el más alto
   registrado
 

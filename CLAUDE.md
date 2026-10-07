@@ -106,6 +106,10 @@ eventualmente se usará. Pero el diagnóstico apunta al coaching.
   reescribe, clasifica el nicho, compara el volumen contra el estándar
   de 14, y entrega el plan del primer mes.
 
+**Confirmado por Sebastián (7 oct 2026):** todos los números de
+rendimiento en `nichos/` son reales y se pueden citar en material público.
+Se escriben con «+» porque solo suben o se estancan.
+
 **Pendiente de Sebastián:**
 1. La tasa de cierre real para la calculadora (hoy asume 1 de cada 10)
 2. Grabar la librería de audios pregrabados (uno por nicho + uno por tipo

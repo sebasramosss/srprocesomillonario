@@ -3,8 +3,9 @@
 > **Fuente:** guiones reales de clientes SRGA (Joyería París, Yanet, Eli
 > Ventura, Ibsen, Dainy, Darsys, SRGA) + datos de rendimiento de la clase
 > de Victor Heras.
-> **Números:** salen de la tabla de rendimiento del Notion. Pendientes de
-> verificar contra las métricas crudas de Instagram.
+> **Números:** confirmados como reales por Sebastián (7 oct 2026). Se
+> escriben siempre con «+» porque las vistas solo suben o se estancan,
+> nunca bajan — así el dato sigue siendo cierto dentro de seis meses.
 
 ## El principio
 
@@ -77,8 +78,8 @@ dar cifras. Un gancho de transformación sin números es una promesa vacía.
 al final del video y todo el mundo quiere saberla. No requiere historia ni
 producción.
 
-**Validado en:** Eli Ventura — juego de adivinar precios, **430K vistas**.
-Darsys — escalera de precio, **606K**. Y es el consejo textual de Victor
+**Validado en:** Eli Ventura — juego de adivinar precios, **+430 mil vistas**.
+Darsys — escalera de precio, **+606 mil**. Y es el consejo textual de Victor
 para joyería («el loop que se abre al inicio es ¿cuánto vale?, y ese video
 tiene un millón de likes»).
 
@@ -149,7 +150,7 @@ oferta.
 imposible no preguntarse en cuál caes. Genera debate en comentarios.
 
 **Validado en:** Ibsen «millonario, rico, clase media» — formato RANKINGS.
-El video de dinero de Ibsen llegó a **6M**.
+El video de dinero de Ibsen llegó a **+6 millones**.
 
 **Adaptación por nicho:**
 
@@ -290,7 +291,7 @@ El campo `OBJETIVO` de los guiones solo tiene tres valores:
 Regla de entrega definida por Sebastián:
 
 1. **Una idea completa, con el número exacto.** Es el ancla de autoridad.
-   > «Esta idea nos generó 430 mil vistas para un cliente y le trajo
+   > «Esta idea nos generó +430 mil vistas para un cliente y le trajo
    > ventas. Te la doy completa.»
 
 2. **Seis ganchos más, sin números y sin la idea general.** Solo la

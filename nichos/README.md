@@ -102,9 +102,9 @@ se convierte.**
 
 | Caso | Vistas | Comentarios | Resultado |
 |---|---|---|---|
-| París «tengo una emergencia» | 3.2M | 0.01% | Viral **sin** venta |
-| Ibsen «un dólar… cien mil dólares» | 6M | 0.03% | Viral **sin** venta |
-| **Yanet «para que no seas una mantenida»** | **2.37M** | **12,324** | **Viral que vende** |
+| París «tengo una emergencia» | +3.2M | 0.01% | Viral **sin** venta |
+| Ibsen «un dólar… cien mil dólares» | +6M | 0.03% | Viral **sin** venta |
+| **Yanet «para que no seas una mantenida»** | **+2.37M** | **12,324** | **Viral que vende** |
 
 La diferencia no son las vistas. Es que Yanet tiene las tres partes:
 
