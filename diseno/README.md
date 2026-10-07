@@ -210,3 +210,82 @@ La persona debe sentir:
 > «Esto se siente diferente a otro curso de redes sociales.»
 
 El diseño transmite **ANTES → PROCESO → DESPUÉS.**
+
+---
+
+# Anexo — Componentes del tablero visual
+
+> Tomados del tablero de sistema visual de Sebastián (7 oct 2026).
+> Estos son los componentes concretos que se repiten en todas las piezas.
+
+## Logo
+
+`SR` en peso 900, letter-spacing muy cerrado, seguido del **rayo naranja
+sólido**. Siempre juntos, siempre discreto.
+
+## Botón CTA
+
+Píldora naranja (`border-radius: 999px`) con **flecha → a la derecha**.
+Sombra naranja suave por debajo: `0 8px 28px rgba(255,128,46,.28)`.
+Texto en peso 800. Ejemplo: «Aplicar a una llamada →».
+
+## Caja de icono
+
+El contenedor base de toda la iconografía:
+- 62×62px, `border-radius: 17px`
+- Light: fondo `#F7F7F7`, borde `1px #E7E7E7`
+- Black: fondo `#111111`, borde `1px #242424`
+- Icono de línea adentro, 26px, stroke 1.7
+- **Naranja = activo. Negro o gris = inactivo.**
+
+## Diagrama de flujo
+
+Fila de cajas de icono conectadas por flechas finas. Debajo de cada una:
+nombre en mayúsculas pequeñas + una línea de descripción.
+
+```
+[▶] → [👥] → [📞] → [📊]
+Contenido  Leads  Llamada  Clientes
+```
+
+Naranja marca hasta dónde llega el flujo. Gris lo que todavía no pasa.
+Una **X naranja** marca dónde se rompe.
+
+## Card de métrica
+
+Número enorme (peso 900, letter-spacing −.04em) + etiqueta en mayúsculas
+pequeñas + **mini gráfica debajo**: barras, línea ascendente o barra de
+progreso. Fondo `#F7F7F7`. La card destacada va en `#FFF3EB` con el número
+en naranja.
+
+```
+36M              +100K            520
+VIEWS TOTALES    SEGUIDORES       CLIENTES
+▁▃▅▆█            ╱                ▁▃▅▆█
+```
+
+## Antes / Después
+
+Dos columnas. La de antes en gris con **círculos X**; la de después en
+naranja suave con **círculos de check rellenos**. Es la forma visual de la
+transformación y funciona en cualquier sección.
+
+## Badges flotantes
+
+Pequeñas cápsulas con una métrica y su etiqueta, colocadas alrededor del
+visual principal: `+12.4K SEGUIDORES`, `2,430 LEADS`, `1.2M VIEWS`.
+
+## Prueba social
+
+Pila de avatares circulares superpuestos (borde del color del fondo) +
+«**+700 personas** ya están en el proceso».
+
+## Elementos 3D
+
+El tablero usa renders 3D: smartphone flotante sobre podio, flecha naranja
+ascendente, cubos grises contra cubos naranjas para antes/después, laptop
+con dashboard.
+
+**Esto se produce con herramienta de diseño, no con código.** En una pieza
+HTML se sustituyen por el equivalente plano (caja de icono, mini gráfica,
+listas con check) y se deja el espacio marcado para cuando exista el render.
