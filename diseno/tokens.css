@@ -1,0 +1,86 @@
+/* Sistema de Diseño SR — tokens
+   Copiar al inicio de cualquier pieza. Ver diseno/README.md y modos.md. */
+
+/* ---------- LIGHT MODE ---------- */
+:root{
+  color-scheme: light;
+  --bg:        #FFFFFF;
+  --bg-2:      #F7F7F7;
+  --bg-3:      #F3F3F3;
+  --ink:       #090909;
+  --t2:        #666666;
+  --border:    #E7E7E7;
+  --accent:    #FF802E;
+}
+
+/* ---------- BLACK MODE ---------- */
+.dark, [data-mode="black"]{
+  color-scheme: dark;
+  --bg:        #050505;
+  --bg-2:      #080808;
+  --card:      #111111;
+  --ink:       #FFFFFF;
+  --t2:        #AFAFAF;
+  --t3:        #777777;
+  --border:    #242424;
+  --accent:    #FF802E;
+  /* nunca negro plano */
+  background:
+    radial-gradient(85% 60% at 50% 0%, #0f0f0f 0%, #050505 60%),
+    #050505;
+}
+
+/* ---------- Tipografía ---------- */
+/* <link rel="stylesheet"
+     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"> */
+body{
+  font-family:"Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2{
+  font-weight:800; letter-spacing:-.04em; line-height:1.0;
+  text-transform:uppercase; text-wrap:balance; margin:0;
+}
+h1{ font-size:clamp(2.7rem,10vw,5.4rem) }
+h2{ font-size:clamp(2rem,6.6vw,3.3rem) }
+p { font-size:1.06rem; line-height:1.72; max-width:52ch; color:var(--t2) }
+
+/* El índice de sección: 01, 02, 03 */
+.idx{
+  font-size:.72rem; font-weight:800; letter-spacing:.24em;
+  color:var(--accent); font-variant-numeric:tabular-nums;
+}
+
+/* La palabra estratégica */
+.o{ color:var(--accent) }
+
+/* ---------- DATA MOMENT ---------- */
+/* El número ocupa 25-40% de la composición. */
+.data .fig{
+  display:block; font-weight:900;
+  font-size:clamp(6.5rem,30vw,14rem);
+  line-height:.78; letter-spacing:-.065em;
+  color:var(--accent); font-variant-numeric:tabular-nums;
+}
+.data .cap{
+  font-size:clamp(.8rem,2.4vw,.96rem); font-weight:800;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--ink);
+}
+
+/* ---------- Ritmo ---------- */
+/* Muchísimo espacio negativo. Una idea por sección. */
+section{ padding-block:clamp(80px,14vw,150px) }
+hr     { height:1px; background:var(--border); border:0; margin:0 }
+
+/* ---------- CTA ---------- */
+.btn{
+  display:inline-block; background:var(--accent); color:#0a0a0a;
+  text-decoration:none; font-weight:800; font-size:1rem;
+  padding:20px 46px; border-radius:999px; letter-spacing:-.01em;
+}
+
+/* ---------- Cards: solo cuando hacen falta ---------- */
+.card      { background:var(--bg-2); border-radius:20px; padding:26px 28px }
+.dark .card{ background:#111111; border:1px solid #242424 }
+.card.sel  { border-left:2px solid var(--accent) }

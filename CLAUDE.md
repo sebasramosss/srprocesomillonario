@@ -9,6 +9,7 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 
 | Carpeta | Qué contiene |
 |---|---|
+| `diseno/` | El sistema de diseño. Gobierna TODO lo visual |
 | `marca/` | Quién soy, cómo hablo, a quién le vendo, qué vendo |
 | `nichos/` | El motor: el criterio, los 7 ganchos universales y lo que funcionó por nicho |
 | `referentes/` | Info de referentes, ya traducida a mi comunicación |
@@ -16,15 +17,23 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 | `embudo/` | El camino del comentario a la llamada agendada |
 
 **Antes de trabajar en cualquier lead magnet, lee primero:**
-1. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
-2. `marca/sebas.md` — cómo pienso y cómo enseño, para que todo suene a mí
-3. `nichos/README.md` — el criterio de sector / nicho / micro nicho
-4. `nichos/ganchos.md` — los 7 ganchos que funcionan en todos los nichos
-5. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
-6. `marca/icp.md` — a quién le estamos hablando
-7. `lead-magnets/catalogo.md` — qué existe y en qué estado está
+1. `diseno/README.md` + `diseno/modos.md` — no negociable para todo lo visual
+2. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
+3. `marca/sebas.md` — cómo pienso y cómo enseño, para que todo suene a mí
+4. `nichos/README.md` — el criterio de sector / nicho / micro nicho
+5. `nichos/ganchos.md` — los 7 ganchos que funcionan en todos los nichos
+6. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
+7. `marca/icp.md` — a quién le estamos hablando
+8. `lead-magnets/catalogo.md` — qué existe y en qué estado está
 
 ## Reglas del sistema
+
+**0. Todo lo visual sigue el sistema de diseño.**
+`diseno/` gobierna landing, presentación, masterclass, módulo, PDF, página
+de coaching y checkout. Dos modos: BLACK para poder y autoridad, LIGHT para
+claridad y sistema. Naranja `#FF802E` nunca pasa del 10% de la composición.
+Antes de diseñar cualquier sección: **¿cuál es UNA imagen que hace visible
+esta idea?** Dirección de arte, no solo UI.
 
 **1. Todo se adapta a mi comunicación.**
 La info de referentes viene de muchas nacionalidades. Nunca se copia el
@@ -102,9 +111,12 @@ eventualmente se usará. Pero el diagnóstico apunta al coaching.
 **En construcción:**
 - **Camino a los $10K** — calculadora publicada y funcionando.
   Pendiente: calibrar la tasa de cierre real y el umbral de precio.
-- **Analizador de perfil** — en diseño. Es el grande: analiza la bio y la
-  reescribe, clasifica el nicho, compara el volumen contra el estándar
-  de 14, y entrega el plan del primer mes.
+- **Analizador de perfil** — entregable publicado con la identidad SR.
+  Diagnostica el eslabón roto de la cadena, clasifica el nicho, reescribe
+  la bio, da la idea ancla con su número y 4 ganchos con variables en X.
+  Cierra en black mode con mentalidad y CTA a agendar llamada.
+  Decidido: **no** se regala el plan del primer mes (da demasiado valor).
+  El audio de seguimiento lo maneja Sebastián aparte en ManyChat.
 
 **Confirmado por Sebastián (7 oct 2026):** todos los números de
 rendimiento en `nichos/` son reales y se pueden citar en material público.
