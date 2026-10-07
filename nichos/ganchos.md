@@ -29,6 +29,19 @@ de real estate a salón de belleza y a salón de eventos.
 **Regla: se copia el mecanismo, nunca la frase.** La misma que ya rige
 `marca/voz-y-tono.md` para los referentes.
 
+> ### Qué es real y qué es propuesta
+> En cada gancho, la sección **«Validado en»** cita líneas **textuales** de
+> guiones reales, con su cliente y su número.
+>
+> Las **tablas de adaptación por nicho son propuestas escritas por Claude**,
+> no líneas que se hayan grabado. Sirven de punto de partida, pero **no se
+> pueden presentar a un prospecto como "esto nos funcionó"** hasta que se
+> graben y se midan.
+>
+> *Esta distinción se agregó el 7 oct 2026, después de que una adaptación
+> inventada («¿y eso de verdad deja dinero?») se colara a un entregable
+> como si fuera una línea real.*
+
 ---
 
 ## GANCHO 1 — La transformación con números
@@ -106,17 +119,26 @@ tiene un millón de likes»).
 ### *El que genera más comentarios.*
 
 **Estructura:**
-> Un tercero pregunta algo incómodo o incrédulo sobre el estatus del
-> protagonista: «¿Eso es real?» / «¿Tú a qué te dedicas?» / «¿Cómo le
-> haces?»
+> Un tercero cuestiona en voz alta un símbolo de estatus visible, y la
+> duda deriva en la pregunta clave: **«¿Tú a qué te dedicas?»**
+
+**Las líneas textuales** (1️⃣ GUION «cartera falsa», Joyería París, sep 2026
+— formato POV, objetivo RECURSO GRATIS):
+
+> — Oye, disculpa. Esa cartera… ¿es real o es de las chinas?
+> — ¿Cómo que de las chinas? Es real.
+> — En este pueblo alguien con una Hermes y un lambo, NO CREO.
+>   **¿Tú a qué te dedicas?**
+> — Pues mira, mejor ven, te enseño.
+
+**La plantilla:** «¿Esa <X> es real?… ¿Tú a qué te dedicas?»
 
 **Por qué funciona:** la pregunta la está haciendo el espectador. Cuando
 alguien dentro del video pregunta lo que el espectador piensa, el
 espectador se queda a oír la respuesta. Y la duda genera comentarios.
 
-**Validado en:** Joyería París «la cartera falsa» («Esa cartera… ¿es real
-o es de las chinas?») y SRGA «ella es mi jefa» («¿Cómo le haces para
-vivir en Miami?»).
+**Validado en:** Joyería París «la cartera falsa» y SRGA «ella es mi jefa»
+(«Ella es mi jefa. ¿Cómo le haces para vivir en Miami?»).
 
 **Adaptación por nicho:**
 
