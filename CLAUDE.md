@@ -10,7 +10,7 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 | Carpeta | Qué contiene |
 |---|---|
 | `marca/` | Quién soy, cómo hablo, a quién le vendo, qué vendo |
-| `nichos/` | El motor de nichos: el criterio y lo que ya funcionó por nicho |
+| `nichos/` | El motor: el criterio, los 7 ganchos universales y lo que funcionó por nicho |
 | `referentes/` | Info de referentes, ya traducida a mi comunicación |
 | `lead-magnets/` | Cada herramienta de captación, completa y lista para usar |
 | `embudo/` | El camino del comentario a la llamada agendada |
@@ -19,9 +19,10 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 1. `marca/voz-y-tono.md` — no negociable, define cómo se escribe todo
 2. `marca/sebas.md` — cómo pienso y cómo enseño, para que todo suene a mí
 3. `nichos/README.md` — el criterio de sector / nicho / micro nicho
-4. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
-5. `marca/icp.md` — a quién le estamos hablando
-6. `lead-magnets/catalogo.md` — qué existe y en qué estado está
+4. `nichos/ganchos.md` — los 7 ganchos que funcionan en todos los nichos
+5. `nichos/catalogo.md` — lo que ya funcionó en cada nicho, con números
+6. `marca/icp.md` — a quién le estamos hablando
+7. `lead-magnets/catalogo.md` — qué existe y en qué estado está
 
 ## Reglas del sistema
 
@@ -47,7 +48,13 @@ diciendo "hay algo que no te puedo decir".
 - `entregable.md` — el formato de lo que recibe la persona
 - `captacion.md` — el contenido que lo promociona + el DM
 
-**5. Cada lead magnet terminado se convierte en skill.**
+**5. Las llamadas se analizan de forma continua.**
+De cada sesión en adelante se revisan las llamadas nuevas de Fathom
+(masterclasses, 1:1, ventas) y lo que aporte algo se incorpora a
+`marca/sebas.md`, `nichos/` o al embudo. El cerebro no se escribe una vez:
+se actualiza con cada llamada.
+
+**6. Cada lead magnet terminado se convierte en skill.**
 Cuando la metodología está probada, se empaqueta como skill para que
 funcione con un comando desde cualquier chat. Es la diferencia entre tener
 documentos y tener herramientas.
@@ -88,7 +95,7 @@ eventualmente se usará. Pero el diagnóstico apunta al coaching.
 **Listo:**
 - Base del repo, voz y tono
 - `marca/sebas.md` — 55 reuniones de Fathom analizadas
-- `nichos/` — el motor completo: criterio + catálogo con datos reales
+- `nichos/` — el motor completo: criterio + 7 ganchos universales + catálogo
 - `marca/oferta.md`, `marca/icp.md`, `marca/mecanismo.md`
 - `01-analisis-perfil/` — las 4 piezas, pendientes de recalibrar
 
