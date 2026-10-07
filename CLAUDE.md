@@ -97,7 +97,7 @@ Lo que está conectado y se puede consultar directamente:
 | Skill `stories-de-venta` | Completo | Metodología SRGA de stories: 3 tipos de secuencia, catálogo de imágenes por rol, mecánicas de CTA |
 | Fathom | Completo | Grabaciones y transcripciones de llamadas |
 | Drive · Gmail · Calendar | Completo | Archivos, correo, agenda |
-| SRGA Content Studio | **Sin acceso** | Plataforma interna, base de datos propia. Si tiene metodología que no está en Notion, se pierde |
+| SRGA Content Studio | **Export manual** | Sebastián exporta CSV de videos ganadores. Los que hay están en `nichos/data/` (75 videos, 5 cuentas, con transcripción y métricas) |
 
 **Nota:** la skill `creador-ofertas` que aparece disponible es de ELEVATE
 Growth Agency CR y usa voseo costarricense. **No se usa** para material de
@@ -145,5 +145,6 @@ Se escriben con «+» porque solo suben o se estancan.
 1. La tasa de cierre real para la calculadora (hoy asume 1 de cada 10)
 2. Grabar la librería de audios pregrabados (uno por nicho + uno por tipo
    de cuello de botella)
-3. Decidir si el Content Studio se integra al repo o por API
+3. Más exports del Content Studio: cada nicho nuevo mejora la librería de
+   ganchos. Hoy hay joyería (x2), construcción, maquillaje y reventa.
 4. `referentes/` sigue vacío
