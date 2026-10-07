@@ -1,5 +1,11 @@
 # Voz y tono — Sebastián / SR Growth Agency
 
+> **⚠️ PARCIALMENTE INVENTADO.** Las reglas (español neutro, sin voseo,
+> frases cortas, cero relleno) salen de observar cómo escribe y habla
+> Sebastián en este chat y en los Fathoms. **Los ejemplos de «no / sí» los
+> escribí yo** — no son frases suyas. Sirven para explicar la regla, no
+> para citarse como material de SRGA.
+
 Este archivo define cómo se escribe **todo** en este sistema: análisis,
 DMs, guiones, reels, propuestas. No es una guía de estilo decorativa.
 Si algo no suena así, se reescribe.

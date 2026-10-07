@@ -1,5 +1,18 @@
 # Captación — Análisis de Perfil Completo
 
+> ## ⚠️ ESTE ARCHIVO ESTÁ INVENTADO
+>
+> Lo escribí antes de tener acceso a Notion y a Fathom, sin material real
+> de SRGA. Los guiones, ejemplos, frases y números de acá **no salen de
+> ningún documento, llamada ni video de la agencia**.
+>
+> **No se usa con prospectos hasta reemplazarlo por el material real.**
+> Ver la REGLA MADRE en `CLAUDE.md`.
+>
+> *Marcado el 7 oct 2026.*
+
+
+
 El contenido que trae a la gente al lead magnet.
 **Palabra clave: VIRAL**
 

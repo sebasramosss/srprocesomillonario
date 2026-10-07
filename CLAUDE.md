@@ -28,6 +28,25 @@ atención de un prospecto, darle valor real, y llevarlo a una llamada.
 
 ## Reglas del sistema
 
+**REGLA MADRE — Nada se inventa.**
+
+Todo lo que se le muestra a un prospecto sale de material real de SRGA:
+guiones grabados, métricas medidas, frases dichas en una llamada, casos
+con nombre y número.
+
+- Si no tiene fuente, **no se escribe**.
+- Si hace falta un ejemplo y no existe, **se pide**, no se inventa.
+- Cada dato lleva de dónde salió: documento, cliente y fecha.
+- Un ejemplo de demostración se marca como demostración, siempre y de
+  forma visible.
+
+Dentro del repo puede haber propuestas sin grabar, pero van marcadas como
+tales y **nunca** se presentan a un prospecto como «esto nos funcionó».
+
+*Esta regla la fijó Sebastián el 7 oct 2026, después de que una frase
+inventada se colara a un entregable como si fuera una línea real de un
+guion.*
+
 **0. Todo lo visual sigue el sistema de diseño.**
 `diseno/` gobierna landing, presentación, masterclass, módulo, PDF, página
 de coaching y checkout. Dos modos: BLACK para poder y autoridad, LIGHT para
