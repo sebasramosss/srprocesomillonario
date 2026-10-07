@@ -1,0 +1,541 @@
+<title>Analiza tu Perfil</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#FFFFFF; --bg-2:#F7F7F7; --bg-3:#F5F5F5;
+    --ink:#0A0A0A; --t2:#666666; --t3:#A0A0A0;
+    --border:#E7E7E7; --accent:#FF802E; --accent-soft:#FFF3EB;
+    --black:#050505; --b-t2:#AFAFAF; --b-t3:#777777; --b-border:#242424;
+  }
+  *{box-sizing:border-box}
+  html,body{background:var(--bg)}
+  body{
+    margin:0;color:var(--ink);background:var(--bg);
+    font-family:"Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding-inline:22px}
+
+  h1,h2{font-weight:800;letter-spacing:-.04em;line-height:1.0;margin:0;text-transform:uppercase;text-wrap:balance}
+  h1{font-size:clamp(2.3rem,8.5vw,4.2rem)}
+  h2{font-size:clamp(1.7rem,5.6vw,2.7rem);margin-bottom:22px}
+  .o{color:var(--accent)}
+  p{margin:0 0 18px;max-width:52ch;color:var(--t2);font-size:1.04rem;line-height:1.7}
+  p strong{color:var(--ink);font-weight:600}
+  .small{font-size:.9rem;max-width:46ch}
+  .num{font-variant-numeric:tabular-nums}
+  .idx{font-size:.7rem;font-weight:800;letter-spacing:.24em;color:var(--accent);margin:0 0 18px;font-variant-numeric:tabular-nums}
+  .idx .g{color:var(--t3);font-weight:700}
+  section{padding-block:clamp(56px,10vw,96px)}
+  hr{height:1px;background:var(--border);border:0;margin:0}
+  [hidden]{display:none!important}
+
+  header.top{padding-block:clamp(28px,5vw,44px) clamp(36px,7vw,60px)}
+  .mark{display:flex;align-items:center;gap:7px;margin-bottom:clamp(40px,8vw,72px)}
+  .mark .w{font-weight:900;font-size:1.2rem;letter-spacing:-.04em}
+  .bolt{width:15px;height:19px;display:block;flex:0 0 auto}
+
+  /* ---------- formulario ---------- */
+  .form{background:var(--bg-2);border-radius:24px;padding:clamp(22px,4.5vw,34px);margin-top:10px}
+  .fstep + .fstep{margin-top:30px;padding-top:28px;border-top:1px solid #E4E4E4}
+  .fstep-t{font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+  .grid{display:grid;gap:15px;grid-template-columns:1fr 1fr}
+  .grid.one{grid-template-columns:1fr}
+  @media(max-width:540px){.grid{grid-template-columns:1fr}}
+  .f label{display:block;font-size:.85rem;font-weight:700;margin-bottom:7px;color:var(--ink)}
+  .f .hint{font-size:.76rem;color:var(--t3);margin-top:5px;line-height:1.4}
+  input,select,textarea{
+    width:100%;background:#fff;color:var(--ink);border:1px solid var(--border);
+    border-radius:12px;padding:13px 15px;font:inherit;font-size:1rem;
+    font-family:inherit;
+  }
+  input[type=number]{font-variant-numeric:tabular-nums}
+  textarea{resize:vertical;min-height:84px;line-height:1.5}
+  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  .money{position:relative}
+  .money input{padding-left:30px}
+  .money::before{content:"$";position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--t3);pointer-events:none}
+  .btn{
+    display:inline-flex;align-items:center;gap:11px;background:var(--accent);color:#0a0a0a;
+    text-decoration:none;border:0;cursor:pointer;font-family:inherit;
+    font-weight:800;font-size:1rem;padding:18px 36px;border-radius:999px;
+    box-shadow:0 8px 28px rgba(255,128,46,.28);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(255,128,46,.36)}
+  .btn:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+  .btn svg{width:15px;height:15px}
+  .btn-row{margin-top:28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .err{color:#D23B14;font-size:.86rem;font-weight:600;margin:0}
+
+  /* ---------- resultado ---------- */
+  .verdict h1{margin-bottom:26px}
+  .data{text-align:center}
+  .data .fig{display:block;font-weight:900;font-size:clamp(5rem,22vw,11rem);line-height:.8;letter-spacing:-.065em;color:var(--accent);font-variant-numeric:tabular-nums}
+  .data .cap{margin:26px 0 0;font-size:clamp(.76rem,2.2vw,.92rem);font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);max-width:none}
+  .data .sub{margin:13px auto 0;max-width:34ch;font-size:.94rem}
+
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:13px;margin-top:38px}
+  .metric{background:var(--bg-2);border-radius:20px;padding:22px 20px}
+  .metric .v{display:block;font-weight:900;font-size:clamp(1.7rem,4.6vw,2.3rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+  .metric .l{display:block;font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--t2);margin-top:10px}
+  .metric .n{display:block;font-size:.76rem;color:var(--t3);margin-top:7px;line-height:1.4}
+  .metric.hot{background:var(--accent-soft)}
+  .metric.hot .v{color:var(--accent)}
+  .metric.hot .l{color:#B3561A}
+
+  .bar{margin-top:40px}
+  .bar-t{display:flex;justify-content:space-between;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);margin-bottom:11px}
+  .bar-track{height:10px;background:var(--bg-3);border-radius:999px;position:relative;overflow:visible}
+  .bar-fill{height:100%;background:var(--accent);border-radius:999px;transition:width .5s cubic-bezier(.2,.7,.3,1)}
+  .bar-med{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink)}
+  .bar-lab{display:flex;justify-content:space-between;margin-top:10px;font-size:.78rem;color:var(--t3)}
+
+  .steps{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--border)}
+  .steps li{border-bottom:1px solid var(--border);padding:18px 0;display:flex;align-items:baseline;gap:18px}
+  .steps .k{flex:0 0 84px;font-size:.64rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--t3)}
+  .steps .v{flex:1 1 auto;font-size:1rem;color:var(--t2);font-weight:500}
+  .steps li.key .k{color:var(--accent)}
+  .steps li.key .v{color:var(--ink);font-weight:700}
+
+  .bios{display:grid;gap:13px;margin-top:34px}
+  .bio{background:var(--bg-2);border-radius:20px;padding:24px 26px}
+  .bio.was{background:transparent;border:1px dashed var(--border)}
+  .bio .tag{display:block;font-size:.62rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .bio.was .tag{color:var(--t3)}
+  .bio .txt{font-size:.99rem;line-height:1.6;color:var(--ink);font-weight:500;white-space:pre-line}
+  .bio.was .txt{color:var(--t3);font-weight:400}
+
+  .hooks{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--border)}
+  .hooks li{border-bottom:1px solid var(--border);padding:26px 0}
+  .hk-top{display:flex;align-items:baseline;gap:15px}
+  .hk-n{font-size:.7rem;font-weight:800;color:var(--accent);flex:0 0 22px;font-variant-numeric:tabular-nums}
+  .hk-t{flex:1 1 auto;font-size:clamp(1.02rem,2.8vw,1.26rem);font-weight:700;line-height:1.38;letter-spacing:-.02em;color:var(--ink)}
+  .hk-x{color:var(--accent)}
+  .hk-fmt{display:flex;gap:8px;margin:14px 0 0 37px;flex-wrap:wrap}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg-2);border:1px solid var(--border);border-radius:999px;padding:6px 13px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t2)}
+  .chip.hot{background:var(--accent-soft);border-color:#FFD2B3;color:#B3561A}
+
+  figure{margin:36px 0 0}
+  .flow{display:flex;align-items:flex-start;gap:5px;overflow-x:auto;padding-bottom:6px}
+  .node{display:flex;flex-direction:column;align-items:center;text-align:center;flex:0 0 108px}
+  .ibox{width:58px;height:58px;border-radius:16px;background:var(--bg-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .ibox svg{width:24px;height:24px}
+  .ibox.off{background:#FAFAFA}
+  .ibox.off svg{opacity:.3}
+  .node .n{font-size:.64rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:12px}
+  .node .d{font-size:.76rem;color:var(--t2);margin-top:4px;font-variant-numeric:tabular-nums}
+  .node.off .n{color:var(--t3)}
+  .arrow,.brk{flex:0 0 24px;display:flex;align-items:center;justify-content:center;height:58px}
+  .arrow svg{width:20px;height:10px}
+  .brk svg{width:18px;height:18px}
+  figcaption{margin-top:24px;font-size:.88rem;color:var(--t2);max-width:46ch;line-height:1.6}
+
+  .dark{background:radial-gradient(85% 60% at 50% 0%,#101010 0%,var(--black) 62%),var(--black);color:#fff}
+  .dark h2{color:#fff}
+  .dark p{color:var(--b-t2)}
+  .dark p strong{color:#fff}
+  .dark .small{color:var(--b-t3)}
+  .principle{padding-block:clamp(80px,15vw,140px)}
+  .principle .q{font-weight:800;font-size:clamp(2rem,7.6vw,3.7rem);line-height:1.03;letter-spacing:-.04em;margin:0 0 36px;text-transform:uppercase;text-wrap:balance}
+  .cta-sec{padding-block:0 clamp(70px,13vw,120px)}
+  .proof{display:flex;align-items:center;gap:13px;margin-top:30px}
+  .avs{display:flex}
+  .avs span{width:32px;height:32px;border-radius:50%;border:2px solid var(--black);margin-left:-10px;background:linear-gradient(140deg,#FF9F5A,#E2621A)}
+  .avs span:first-child{margin-left:0}
+  .proof .px{font-size:.83rem;line-height:1.35;color:var(--b-t2);margin:0}
+  .proof .px b{color:#fff;display:block;font-weight:700}
+  .dark footer{border-top:1px solid var(--b-border);padding-top:30px;display:flex;align-items:center;gap:7px;font-size:.64rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--b-t3)}
+  .dark footer .w{font-weight:900;font-size:1rem;letter-spacing:-.04em;color:#fff;text-transform:none}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 9.2 L15 12 L10 14.8 Z" fill="currentColor"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1.8 12s3.8-6.2 10.2-6.2S22.2 12 22.2 12s-3.8 6.2-10.2 6.2S1.8 12 1.8 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M3 5.5h18v11H8.5L4 20.5V16.5H3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.4 3.5h3l1.6 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.6v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.4 5.7 2 2 0 0 1 6.4 3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.8 20c0-3.6 3.2-5.8 7.2-5.8s7.2 2.2 7.2 5.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 11 L21.5 7.5v9L15.5 13Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 12"><path d="M0 6h20M15 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.6 8.6l6.8 6.8M15.4 8.6l-6.8 6.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<!-- ============ ENTRADA ============ -->
+<div class="wrap" id="pantalla-form">
+  <header class="top">
+    <div class="mark">
+      <span class="w">SR</span>
+      <svg class="bolt" viewBox="0 0 28 34" aria-label="SR"><path d="M17 1 L5 19 L13 19 L11 33 L23 15 L15 15 Z" fill="#FF802E"/></svg>
+    </div>
+    <p class="idx">ANÁLISIS DE PERFIL · GRATIS</p>
+    <h1>¿Por qué tu<br>contenido no<br>te trae <span class="o">clientes</span>?</h1>
+    <p style="margin-top:22px">Pon tus números y te digo exactamente dónde se corta tu camino. Lo comparo contra <strong>75 videos reales</strong> de nuestros clientes, medidos uno por uno.</p>
+  </header>
+
+  <div class="form">
+    <div class="fstep">
+      <p class="fstep-t">01 · Tu negocio</p>
+      <div class="grid one">
+        <div class="f">
+          <label for="usuario">Tu usuario de Instagram</label>
+          <input type="text" id="usuario" placeholder="@tucuenta" autocomplete="off">
+        </div>
+        <div class="f">
+          <label for="producto">¿Qué vendes?</label>
+          <input type="text" id="producto" placeholder="Ej: programa para maquilladoras" maxlength="70" autocomplete="off">
+        </div>
+      </div>
+      <div class="grid" style="margin-top:15px">
+        <div class="f">
+          <label for="precio">¿A cuánto lo vendes?</label>
+          <div class="money"><input type="number" id="precio" min="1" step="any" inputmode="decimal" placeholder="500"></div>
+        </div>
+        <div class="f">
+          <label for="clientes">Clientes al mes hoy</label>
+          <input type="number" id="clientes" min="0" step="1" inputmode="numeric" placeholder="4">
+        </div>
+      </div>
+    </div>
+
+    <div class="fstep">
+      <p class="fstep-t">02 · Tu contenido</p>
+      <div class="grid">
+        <div class="f">
+          <label for="seguidores">Seguidores</label>
+          <input type="number" id="seguidores" min="1" step="1" inputmode="numeric" placeholder="3200">
+        </div>
+        <div class="f">
+          <label for="videos">Videos que subes al mes</label>
+          <input type="number" id="videos" min="0" step="1" inputmode="numeric" placeholder="8">
+        </div>
+      </div>
+      <div class="grid" style="margin-top:15px">
+        <div class="f">
+          <label for="vistas">Vistas promedio por video</label>
+          <input type="number" id="vistas" min="0" step="1" inputmode="numeric" placeholder="9000">
+        </div>
+        <div class="f">
+          <label for="likes">Likes promedio por video</label>
+          <input type="number" id="likes" min="1" step="1" inputmode="numeric" placeholder="400">
+        </div>
+      </div>
+      <div class="grid one" style="margin-top:15px">
+        <div class="f">
+          <label for="comentarios">Comentarios promedio por video</label>
+          <input type="number" id="comentarios" min="0" step="1" inputmode="numeric" placeholder="12">
+          <p class="hint">Este es el dato más importante de todos. Mira tus últimos 5 videos y saca el promedio.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fstep">
+      <p class="fstep-t">03 · Tu perfil</p>
+      <div class="f">
+        <label for="bio">Pega tu bio actual</label>
+        <textarea id="bio" placeholder="Copia y pega exactamente lo que dice tu bio hoy"></textarea>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn" id="go" type="button">Ver mi análisis <svg viewBox="0 0 24 12"><use href="#i-arrow"/></svg></button>
+      <p class="err" id="error" hidden></p>
+    </div>
+  </div>
+  <div style="height:70px"></div>
+</div>
+
+<!-- ============ RESULTADO ============ -->
+<div id="pantalla-res" hidden>
+  <div class="wrap">
+    <header class="top">
+      <div class="mark">
+        <span class="w">SR</span>
+        <svg class="bolt" viewBox="0 0 28 34" aria-hidden="true"><path d="M17 1 L5 19 L13 19 L11 33 L23 15 L15 15 Z" fill="#FF802E"/></svg>
+      </div>
+      <p class="idx" id="r-meta">ANÁLISIS DE PERFIL</p>
+      <div class="verdict"><h1 id="r-titulo"></h1></div>
+      <p id="r-intro" style="font-size:1.1rem"></p>
+    </header>
+
+    <hr>
+    <section class="data">
+      <span class="fig num" id="r-fig"></span>
+      <p class="cap" id="r-figcap"></p>
+      <p class="sub" id="r-figsub"></p>
+    </section>
+
+    <hr>
+    <section>
+      <p class="idx">01 &nbsp;<span class="g">TUS NÚMEROS</span></p>
+      <h2 id="r-h1"></h2>
+      <p id="r-diag"></p>
+      <div class="metrics" id="r-metrics"></div>
+
+      <div class="bar">
+        <div class="bar-t"><span>Tu tasa de conversación</span><span id="r-bar-val"></span></div>
+        <div class="bar-track"><div class="bar-fill" id="r-bar"></div><div class="bar-med" id="r-med" title="Mediana de nuestros 75 videos"></div></div>
+        <div class="bar-lab"><span>0%</span><span>La línea negra es la mediana de nuestros 75 videos: 3.11%</span></div>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <p class="idx">02 &nbsp;<span class="g">DÓNDE SE CORTA</span></p>
+      <h2>Tu cadena</h2>
+      <figure>
+        <div class="flow" id="r-flow"></div>
+        <figcaption id="r-flowcap"></figcaption>
+      </figure>
+    </section>
+
+    <hr>
+    <section>
+      <p class="idx">03 &nbsp;<span class="g">TU CAMINO</span></p>
+      <h2 id="r-h3"></h2>
+      <p id="r-camino"></p>
+      <ul class="steps" id="r-steps"></ul>
+    </section>
+
+    <hr>
+    <section>
+      <p class="idx">04 &nbsp;<span class="g">TU BIO</span></p>
+      <h2>Dice lo que<br>eres. No lo<br>que das.</h2>
+      <p class="small">Tres versiones armadas con tus datos. Copia la que más te suene a ti.</p>
+      <div class="bios" id="r-bios"></div>
+    </section>
+
+    <hr>
+    <section class="data">
+      <span class="fig num">27,183</span>
+      <p class="cap">comentarios en un solo video</p>
+      <p class="sub">El récord de nuestros 75 videos medidos. Y fue un tutorial.</p>
+    </section>
+
+    <section style="padding-top:0">
+      <p>Abre mostrando <strong>tres formas equivocadas</strong> de hacer algo que tu gente hace todos los días. Quien lo hace mal se queda a corregirse. Quien lo hace bien se queda a confirmarlo. Nadie se va.</p>
+      <p>Y acá está lo importante: nuestros tres videos con <strong>más alcance</strong> — 369 mil, 368 mil y 308 mil likes — tuvieron las <strong>peores</strong> tasas de conversación de los 75. Todos mostraban a alguien rico siendo rico.</p>
+      <p class="small">El espectáculo viraliza. Enseñar algo que se puede repetir es lo que hace que te escriban.</p>
+    </section>
+
+    <hr>
+    <section>
+      <p class="idx">05 &nbsp;<span class="g">CUATRO GANCHOS</span></p>
+      <h2>Los que más<br>conversación<br>generaron</h2>
+      <p>Medidos en 75 videos de nuestros clientes. Cambia la <span class="o">X</span> por lo tuyo.</p>
+      <ul class="hooks" id="r-hooks"></ul>
+    </section>
+  </div>
+
+  <div class="dark">
+    <div class="wrap">
+      <section class="principle">
+        <p class="q">Esto es la<br>mitad del<br><span class="o">trabajo</span>.</p>
+        <p style="font-size:1.06rem">Para que funcione de verdad necesitas la mentalidad correcta: convertirte en <strong>la persona con el nivel de acción</strong> que hace falta para atraer más clientes, sostener tu negocio y escalarlo.</p>
+        <p>Y ganar la confianza para que la gente te siga por <strong>quién eres</strong>, no por lo que tienes.</p>
+        <p class="small">Eso no se arregla con un gancho ni con una bio nueva. Es lo que trabajamos dentro de la Academia, al mismo nivel que la marca personal.</p>
+      </section>
+      <section class="cta-sec">
+        <h2>El siguiente<br>nivel</h2>
+        <p>Si quieres ser parte de la Academia, cambiar en todas las áreas y llevar tu marca personal a donde tiene que estar.</p>
+        <a class="btn" href="#agendar" style="margin-top:14px">Aplicar a una llamada <svg viewBox="0 0 24 12"><use href="#i-arrow"/></svg></a>
+        <div class="proof">
+          <div class="avs"><span></span><span></span><span></span><span></span></div>
+          <p class="px"><b>+700 personas</b>ya están en el proceso</p>
+        </div>
+      </section>
+      <footer>
+        <span class="w">SR</span>
+        <svg class="bolt" viewBox="0 0 28 34" aria-hidden="true"><path d="M17 1 L5 19 L13 19 L11 33 L23 15 L15 15 Z" fill="#FF802E"/></svg>
+        <span style="margin-left:6px">Proceso Millonario</span>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var N=function(n){return new Intl.NumberFormat('en-US').format(Math.round(n))};
+  var M=function(n){return '$'+new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n))};
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
+
+  /* Benchmarks medidos en los 75 videos de clientes SRGA (nichos/data) */
+  var MEDIANA = 3.11;   // mediana de comentarios/likes
+  var ESTANDAR_VIDEOS = 14;
+  var META = 10000;
+
+  $('go').addEventListener('click', function(){
+    var v = {
+      usuario: ($('usuario').value||'').trim().replace(/^@/,''),
+      producto: ($('producto').value||'').trim(),
+      precio: parseFloat($('precio').value),
+      clientes: parseFloat($('clientes').value),
+      seguidores: parseFloat($('seguidores').value),
+      videos: parseFloat($('videos').value),
+      vistas: parseFloat($('vistas').value),
+      likes: parseFloat($('likes').value),
+      comentarios: parseFloat($('comentarios').value),
+      bio: ($('bio').value||'').trim()
+    };
+    var faltan=[];
+    if(!v.producto) faltan.push('qué vendes');
+    if(!(v.precio>0)) faltan.push('el precio');
+    if(!(v.clientes>=0)) faltan.push('clientes al mes');
+    if(!(v.seguidores>0)) faltan.push('seguidores');
+    if(!(v.videos>=0)) faltan.push('videos al mes');
+    if(!(v.vistas>=0)) faltan.push('vistas promedio');
+    if(!(v.likes>0)) faltan.push('likes promedio');
+    if(!(v.comentarios>=0)) faltan.push('comentarios promedio');
+    if(faltan.length){
+      var e=$('error'); e.hidden=false;
+      e.textContent='Falta '+faltan.slice(0,3).join(', ')+(faltan.length>3?' y '+(faltan.length-3)+' más':'')+'.';
+      return;
+    }
+    $('error').hidden=true;
+    render(v);
+    $('pantalla-form').hidden=true;
+    $('pantalla-res').hidden=false;
+    window.scrollTo(0,0);
+  });
+
+  function render(v){
+    /* ---------- cálculos ---------- */
+    var tasa = v.comentarios / v.likes * 100;
+    var mult = v.vistas / v.seguidores;
+    var color = mult>=5 ? 'verde' : (mult>=1 ? 'amarillo' : 'rojo');
+    var facturacion = v.precio * v.clientes;
+    var necesarios = Math.ceil(META / v.precio);
+    var faltantes  = Math.max(0, necesarios - v.clientes);
+    var comentariosMes = Math.round(v.comentarios * v.videos);
+
+    /* ---------- el eslabón roto ---------- */
+    var roto, titulo, diag, figN, figCap, figSub;
+    if (v.videos < 7){
+      roto='volumen';
+      titulo='No es tu contenido.<br>Es tu <span class="o">volumen</span>.';
+      figN=N(v.videos); figCap='videos al mes';
+      figSub='Nuestro estándar por cliente son '+ESTANDAR_VIDEOS+'. Estás a '+(ESTANDAR_VIDEOS/Math.max(v.videos,1)).toFixed(1)+' veces de distancia.';
+      diag='Con '+N(v.videos)+' videos al mes no hay suficientes intentos. En nuestros datos lo normal es que <strong>7 de cada 10 videos salgan mal</strong>. Eso no es un problema: es estadística. El problema es no tener suficientes tiros.';
+    } else if (color==='rojo'){
+      roto='gancho';
+      titulo='Tu problema está<br>en los primeros<br>tres <span class="o">segundos</span>.';
+      figN=mult.toFixed(1)+'×'; figCap='vistas contra tus seguidores';
+      figSub='Por debajo de 1× significa que ni tus propios seguidores te están viendo.';
+      diag='Tus videos promedian '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores. Eso es <strong>'+mult.toFixed(1)+' veces</strong> tu audiencia — en rojo. Cuando ni tu propia gente llega al video, el problema está en el gancho.';
+    } else if (tasa < MEDIANA){
+      roto='puente';
+      titulo='Tu contenido<br>funciona. Tu<br><span class="o">puente</span> no existe.';
+      figN=tasa.toFixed(2)+'%'; figCap='tu tasa de conversación';
+      figSub='La mediana de nuestros 75 videos medidos es 3.11%.';
+      diag='Tus videos llegan: '+N(v.vistas)+' vistas con '+N(v.seguidores)+' seguidores es '+mult.toFixed(1)+'× tu audiencia. Pero de cada 100 personas que te dan like, solo <strong>'+tasa.toFixed(1)+' comentan</strong>. Tus videos terminan y nadie sabe qué hacer después.';
+    } else if (faltantes > 0 && v.clientes < 1){
+      roto='oferta';
+      titulo='La gente te<br>escribe. No te<br><span class="o">compra</span>.';
+      figN=N(comentariosMes); figCap='comentarios al mes';
+      figSub='Y de ahí no está saliendo ni un cliente.';
+      diag='Tu tasa de conversación es '+tasa.toFixed(1)+'%, por encima de nuestra mediana. El contenido está haciendo su trabajo. Lo que no está cerrando es lo que pasa después del comentario.';
+    } else {
+      roto='escala';
+      titulo='Tu base<br>está <span class="o">lista</span>.';
+      figN=tasa.toFixed(2)+'%'; figCap='tu tasa de conversación';
+      figSub='Por encima de la mediana de nuestros 75 videos.';
+      diag='Tus videos convierten a '+tasa.toFixed(1)+'%, por encima de la mediana de 3.11%. Tu gancho funciona, tu puente existe y estás cerrando. Lo que te separa del siguiente nivel es volumen y sistema, no estrategia.';
+    }
+
+    $('r-meta').innerHTML = 'ANÁLISIS DE PERFIL' + (v.usuario? ' · @'+esc(v.usuario) : '');
+    $('r-titulo').innerHTML = titulo;
+    $('r-intro').innerHTML = 'Comparado contra <strong>75 videos reales</strong> de clientes nuestros, medidos uno por uno.';
+    $('r-fig').textContent = figN;
+    $('r-figcap').textContent = figCap;
+    $('r-figsub').textContent = figSub;
+    $('r-h1').innerHTML = 'El diagnóstico';
+    $('r-diag').innerHTML = diag;
+
+    /* ---------- métricas ---------- */
+    var tasaClass = tasa < MEDIANA ? 'hot' : '';
+    var volClass  = v.videos < ESTANDAR_VIDEOS ? 'hot' : '';
+    var colClass  = color==='rojo' ? 'hot' : '';
+    $('r-metrics').innerHTML =
+      '<div class="metric '+volClass+'"><span class="v num">'+N(v.videos)+'<span style="color:var(--t3);font-size:.5em">/'+ESTANDAR_VIDEOS+'</span></span><span class="l">Videos al mes</span><span class="n">'+(v.videos>=ESTANDAR_VIDEOS?'Estás en el estándar':'Nuestro estándar por cliente')+'</span></div>'+
+      '<div class="metric '+colClass+'"><span class="v num">'+mult.toFixed(1)+'×</span><span class="l">Vistas vs. seguidores</span><span class="n">'+(color==='verde'?'Verde · viral':color==='amarillo'?'Amarillo · funcional':'Rojo · por debajo')+'</span></div>'+
+      '<div class="metric '+tasaClass+'"><span class="v num">'+tasa.toFixed(2)+'%</span><span class="l">Conversación</span><span class="n">Mediana nuestra: 3.11%</span></div>'+
+      '<div class="metric"><span class="v num">'+N(comentariosMes)+'</span><span class="l">Comentarios al mes</span><span class="n">Cada uno es un DM posible</span></div>';
+
+    /* ---------- barra ---------- */
+    var tope = Math.max(tasa*1.25, 8);
+    $('r-bar').style.width = Math.min(tasa/tope*100,100)+'%';
+    $('r-med').style.left  = (MEDIANA/tope*100)+'%';
+    $('r-bar-val').textContent = tasa.toFixed(2)+'%';
+
+    /* ---------- cadena ---------- */
+    var pasos = [
+      {ic:'i-play', n:'Videos',        d:N(v.videos),        ok:v.videos>=7},
+      {ic:'i-eye',  n:'Vistas',        d:N(v.vistas*v.videos), ok:color!=='rojo'},
+      {ic:'i-chat', n:'Comentarios',   d:N(comentariosMes),  ok:tasa>=MEDIANA},
+      {ic:'i-phone',n:'Conversaciones',d:'—',                ok:tasa>=MEDIANA},
+      {ic:'i-user', n:'Clientes',      d:N(v.clientes),      ok:v.clientes>0}
+    ];
+    var corte = pasos.findIndex(function(p){return !p.ok});
+    var html='';
+    pasos.forEach(function(p,i){
+      var activo = corte===-1 || i<corte;
+      if(i>0){
+        html += (i===corte)
+          ? '<div class="brk" style="color:var(--accent)"><svg><use href="#i-x"/></svg></div>'
+          : '<div class="arrow" style="color:'+(activo?'var(--accent)':'var(--t3)')+'"><svg><use href="#i-arrow"/></svg></div>';
+      }
+      html += '<div class="node'+(activo?'':' off')+'">'+
+        '<div class="ibox'+(activo?'':' off')+'" style="color:'+(activo?'var(--accent)':'var(--ink)')+'"><svg><use href="#'+p.ic+'"/></svg></div>'+
+        '<span class="n">'+p.n+'</span><span class="d">'+p.d+'</span></div>';
+    });
+    $('r-flow').innerHTML = html;
+    $('r-flowcap').textContent = corte===-1
+      ? 'Tu cadena está completa. Lo que falta es volumen.'
+      : 'Hasta acá llega tu flujo. De ahí en adelante se corta, y todo lo que hagas antes no se convierte.';
+
+    /* ---------- camino ---------- */
+    if (faltantes===0){
+      $('r-h3').innerHTML = 'Ya pasaste<br>los $10K';
+      $('r-camino').innerHTML = 'Facturas <strong>'+M(facturacion)+'</strong> al mes. Tu problema ya no es llegar: es que no dependa de que tengas un buen mes.';
+      $('r-steps').innerHTML = '<li class="key"><span class="k">Hoy</span><span class="v">'+M(facturacion)+' al mes con '+N(v.clientes)+' clientes</span></li>';
+    } else {
+      $('r-h3').innerHTML = 'Cuánto te<br>falta de<br>verdad';
+      $('r-camino').innerHTML = 'No en seguidores. En clientes y en conversaciones.';
+      $('r-steps').innerHTML =
+        '<li><span class="k">Hoy</span><span class="v">'+M(facturacion)+' al mes</span></li>'+
+        '<li><span class="k">A '+M(v.precio)+'</span><span class="v">$10,000 son '+N(necesarios)+' clientes</span></li>'+
+        '<li><span class="k">Te faltan</span><span class="v">'+N(faltantes)+' clientes</span></li>'+
+        '<li class="key"><span class="k">Es decir</span><span class="v">'+N(faltantes)+' personas que te digan que sí. No 10,000 seguidores.</span></li>';
+    }
+
+    /* ---------- bio ---------- */
+    var prod = esc(v.producto);
+    var palabra = (v.producto.split(/\s+/)[0]||'INFO').toUpperCase().replace(/[^A-ZÁÉÍÓÚÑ]/g,'').slice(0,10) || 'INFO';
+    var bios='';
+    if(v.bio){
+      bios += '<div class="bio was"><span class="tag">La que tienes</span><span class="txt">'+esc(v.bio)+'</span></div>';
+    }
+    bios +=
+      '<div class="bio"><span class="tag">Opción 1 — la promesa</span><span class="txt">Te ayudo a conseguir '+prod+'\nSin adivinar y sin bajar precios\nEscríbeme la palabra '+palabra+'</span></div>'+
+      '<div class="bio"><span class="tag">Opción 2 — la transformación</span><span class="txt">De 0 a '+N(v.clientes||1)+' clientes al mes con '+prod+'\nTe enseño el mismo camino\nEmpieza abajo</span></div>'+
+      '<div class="bio"><span class="tag">Opción 3 — el enemigo</span><span class="txt">Ser bueno en lo tuyo no te hace ganar bien\nTe enseño la parte de negocio que nadie enseña\nEscríbeme '+palabra+'</span></div>';
+    $('r-bios').innerHTML = bios;
+
+    /* ---------- ganchos (reales, medidos) ---------- */
+    var g = [
+      {t:'Te voy a mostrar cómo estoy generando <span class="hk-x">X</span> a mis <span class="hk-x">Y</span>', f:'Hablando a cámara', m:'40.8% conversación'},
+      {t:'Si yo tuviera <span class="hk-x">X</span> y quisiera <span class="hk-x">Y</span>, esto es exactamente lo que haría', f:'Hablando a cámara', m:'30.3% conversación'},
+      {t:'<span class="hk-x">X</span> no se hace así, ni así, y mucho menos así. Si todavía no sabes, quédate', f:'Tutorial', m:'27,183 comentarios'},
+      {t:'¿Cuánto gana un <span class="hk-x">X</span> al mes?', f:'POV · con otra persona', m:'19.9% conversación'}
+    ];
+    $('r-hooks').innerHTML = g.map(function(h,i){
+      return '<li><div class="hk-top"><span class="hk-n">0'+(i+1)+'</span><span class="hk-t">'+h.t+'</span></div>'+
+        '<div class="hk-fmt"><span class="chip"><svg><use href="#i-cam"/></svg>'+h.f+'</span>'+
+        '<span class="chip hot">'+h.m+'</span></div></li>';
+    }).join('');
+  }
+})();
+</script>
